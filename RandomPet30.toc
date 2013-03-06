@@ -1,0 +1,8 @@
+﻿## Interface: 50200
+## Title: RandomPet30 by |cff3fcf26[by Tabethial]|r
+## Notes: Activates a Random Pet
+## Author: Tabethial
+## Version: 5.0.9
+## SavedVariablesPerCharacter: buttonon, fav01, fav02, fav03, glabalQuietStatus 
+Frame.xml
+Frame.lua

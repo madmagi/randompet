@@ -1,0 +1,126 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Frame.lua" />
+	<Frame name="RndPetFrame" setAllPoints="true" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="170" y="110"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="100" y="-286" />
+				</Offset>
+			</Anchor>
+			<Anchor point="MIDDLE">
+				<Offset>
+					<AbsDimension x="200" y="-286" />
+			</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnMouseDown>self:StartMoving();</OnMouseDown>
+			<OnMouseUp>self:StopMovingOrSizing();</OnMouseUp>
+			<OnLoad>RndPetFrame_OnLoad();</OnLoad>
+			<!--<OnEvent>RndPetFrame_OnEvent();</OnEvent>-->
+		</Scripts>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="false">
+			<BackgroundInsets> 
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+		<!--	<TileSize>
+				<AbsValue val="32" />
+			</TileSize>-->
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="RndPet30Btn" inherits="UIPanelButtonTemplate" setAllPoints="true" text="Pet">
+				<Size x="44" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="52" y="-7" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Button1_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			<Button name="RndPet30BtnOn" inherits="UIPanelButtonTemplate" setAllPoints="true" text="On">
+				<Size x="44" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="96" y="-7" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>OnButton_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			<Button name="RndPet30BtnOff" inherits="UIPanelButtonTemplate" setAllPoints="true" text="Off">
+				<Size x="44" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="8" y="-7" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>OffButton_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			<Button name="RndPet30BtnHelp" inherits="UIPanelButtonTemplate" setAllPoints="true" text="?">
+				<Size x="24" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="140" y="-7" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>HelpButton_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			
+			<Button name="Fav01" inherits="UIPanelButtonTemplate" setAllPoints="true" text="">
+				<Size x="158" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="7" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Fav01_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			<Button name="Fav02" inherits="UIPanelButtonTemplate" setAllPoints="true" text="">
+				<Size x="158" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="7" y="-54" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Fav02_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>
+			
+			<Button name="Fav03" inherits="UIPanelButtonTemplate" setAllPoints="true" text="">
+				<Size x="158" y="24" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="7" y="-77" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Fav03_OnClick(self, button, down);</OnClick>
+					<OnUpdate>OnUpdate(self,elapsed)</OnUpdate>
+				</Scripts>
+			</Button>			
+			
+			</Frames>
+	</Frame>
+</Ui>
